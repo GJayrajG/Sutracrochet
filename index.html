@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sutracrochet | Handcrafted For You</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Snipcart CSS for Shopify-like Cart Features -->
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.2/default/snipcart.css" />
+</head>
+<body>
+
+    <!-- Collapsible Left Menu -->
+    <div class="sidebar">
+        <div class="sidebar-icon">
+            <!-- Hamburger SVG -->
+            <svg viewBox="0 0 100 80" width="24" height="24" fill="var(--text-main)">
+                <rect width="100" height="15"></rect>
+                <rect y="30" width="100" height="15"></rect>
+                <rect y="60" width="100" height="15"></rect>
+            </svg>
+        </div>
+        <nav class="side-nav">
+            <a href="#crochet">Crochet Creations</a>
+            <a href="#jewelry">Fine Jewelry</a>
+            <a href="#tutorials">Tutorials</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact Us</a>
+            <!-- Snipcart Account Login Trigger -->
+            <a href="#" class="snipcart-customer-signin" style="color: var(--accent-primary);">My Account</a>
+        </nav>
+    </div>
+
+    <!-- Floating Action Buttons Container -->
+    <div class="floating-actions">
+        <button class="snipcart-customer-signin action-button">
+            👤 Account
+        </button>
+        <button class="snipcart-checkout action-button">
+            🛒 Cart (<span class="snipcart-items-count">0</span>)
+        </button>
+    </div>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="logo">
+                    <img src="logo.png" alt="sutracrochet logo"> 
+                </div>
+                <h1>Handcrafted & <span class="highlight">Curated For You</span></h1>
+                <p>Discover our cozy, custom-made crochet pieces and an exclusive collection of elegant fine jewelry.</p>
+                <a href="#crochet" class="cta-button">Shop Collection</a>
+            </div>
+            <div class="hero-image">
+                <!-- Add hero image background in CSS or img tag here -->
+            </div>
+        </section>
+
+        <!-- Crochet Products Section -->
+        <section id="crochet" class="gallery">
+            <h2>Crochet Creations</h2>
+            <div class="grid">
+                
+                <!-- Product: Blanket -->
+                <div class="card">
+                    <div class="product-image" style="height: 250px; background-image: url('Yarn with tools.jpeg'); background-size: cover; background-position: center; border-radius: 5px; margin-bottom: 1rem;"></div>
+                    <h3>Chevron Crochet Blanket</h3>
+                    <p class="price">₹95.00</p>
+                    <button class="buy-button snipcart-add-item"
+                        data-item-id="crochet-blanket-01"
+                        data-item-price="95.00"
+                        data-item-url="/"
+                        data-item-description="Beautiful handmade chevron pattern blanket with premium yarn."
+                        data-item-image="Yarn with tools.jpeg"
+                        data-item-name="Chevron Crochet Blanket">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <!-- Product: Doll -->
+                <div class="card">
+                    <div class="product-image" style="height: 250px; background-image: url('Doll.jpeg'); background-size: cover; background-position: center; border-radius: 5px; margin-bottom: 1rem;"></div>
+                    <h3>Yellow Amigurumi Doll</h3>
+                    <p class="price">₹25.00</p>
+                    <button class="buy-button snipcart-add-item"
+                        data-item-id="crochet-doll-01"
+                        data-item-price="25.00"
+                        data-item-url="/"
+                        data-item-description="Handcrafted, relaxing yellow amigurumi resting doll."
+                        data-item-image="Doll.jpeg"
+                        data-item-name="Yellow Amigurumi Doll">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <!-- Product: Bag -->
+                <div class="card">
+                    <div class="product-image" style="height: 250px; background: var(--border-color); border-radius: 5px; margin-bottom: 1rem;"></div>
+                    <h3>Chunky Tote Bag</h3>
+                    <p class="price">₹55.00</p>
+                    <button class="buy-button snipcart-add-item"
+                        data-item-id="crochet-bag-01"
+                        data-item-price="55.00"
+                        data-item-url="/"
+                        data-item-description="Spacious handcrafted chunky yarn tote."
+                        data-item-image="logo.png"
+                        data-item-name="Chunky Tote Bag">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <!-- Product: Charm -->
+                <div class="card">
+                    <div class="product-image" style="height: 250px; background: var(--border-color); border-radius: 5px; margin-bottom: 1rem;"></div>
+                    <h3>Bag Charm</h3>
+                    <p class="price">₹10.00</p>
+                    <button class="buy-button snipcart-add-item"
+                        data-item-id="crochet-charm-01"
+                        data-item-price="10.00"
+                        data-item-url="/"
+                        data-item-description="Decorative floral crochet bag charm."
+                        data-item-image="logo.png"
+                        data-item-name="Bag Charm">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fine Jewelry Section -->
+        <section id="jewelry" class="gallery">
+            <h2>Fine Jewelry</h2>
+            <div class="grid">
+                <!-- Product: Metal Necklace -->
+                <div class="card">
+                    <div class="product-image" style="height: 250px; background: var(--border-color); border-radius: 5px; margin-bottom: 1rem;"></div>
+                    <h3>18k Gold Plated Pendant</h3>
+                    <p class="price">₹120.00</p>
+                    <button class="buy-button snipcart-add-item"
+                        data-item-id="fine-jewelry-01"
+                        data-item-price="120.00"
+                        data-item-url="/"
+                        data-item-description="Minimalist 18k gold plated chain and pendant."
+                        data-item-image="logo.png"
+                        data-item-name="18k Gold Plated Pendant">
+                        Add to Cart
+                    </button>
+                </div>
+                
+                <!-- Product: Metal Ring -->
+                <div class="card">
+                    <div class="product-image" style="height: 250px; background: var(--border-color); border-radius: 5px; margin-bottom: 1rem;"></div>
+                    <h3>Sterling Silver Band</h3>
+                    <p class="price">₹65.00</p>
+                    <button class="buy-button snipcart-add-item"
+                        data-item-id="fine-jewelry-02"
+                        data-item-price="65.00"
+                        data-item-url="/"
+                        data-item-description="Classic 925 sterling silver band."
+                        data-item-image="logo.png"
+                        data-item-name="Sterling Silver Band">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tutorials Section -->
+        <section id="tutorials" class="tutorials">
+            <h2>Learn to Crochet</h2>
+            <div class="grid">
+                <div class="card video-card">
+                    <div class="video-placeholder">Free Trial Video</div>
+                    <h3>Basic Stitch Guide</h3>
+                    <p>Start your crochet journey with our beginner-friendly basics.</p>
+                </div>
+                <div class="card video-card premium">
+                    <div class="video-placeholder">Premium Video</div>
+                    <h3>Advanced Blanket Pattern</h3>
+                    <p class="price">₹15.00</p>
+                    <button class="buy-button snipcart-add-item"
+                        data-item-id="tutorial-01"
+                        data-item-price="15.00"
+                        data-item-url="/"
+                        data-item-description="Learn advanced blanket patterns."
+                        data-item-image="logo.png"
+                        data-item-name="Advanced Blanket Pattern">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <p class="contact-sub">Have a question or want to request a custom piece? Drop a message below!</p>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Tell me about your custom request or question..." rows="5" required></textarea>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 sutracrochet. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <!-- Snipcart JavaScript -->
+    <script async src="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.js"></script>
+    <div hidden id="snipcart" data-api-key="MmVhY2Y5N2ItZjIwYi00NGE5LWFiZWYtMjAwNmM5MmZjY2IxNjM5MjA2NzE2MzY1MjM5ODkw"></div>
+
+</body>
+</html>
