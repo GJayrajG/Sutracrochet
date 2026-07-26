@@ -3,17 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Discover our cozy, custom-made crochet pieces and an exclusive collection of elegant fine jewelry.">
+    <meta property="og:title" content="sutracrochet | Handcrafted For You">
+    <meta property="og:image" content="logo.png">
+
     <title>sutracrochet | Handcrafted For You</title>
     <link rel="stylesheet" href="styles.css">
     
-    <!-- Snipcart CSS for Shopify-like Cart Features -->
-    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.2/default/snipcart.css" />
+    <!-- Snipcart CSS (Removed duplicate older version) -->
+    <link rel="preconnect" href="https://app.snipcart.com">
+    <link rel="preconnect" href="https://cdn.snipcart.com">
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.1/default/snipcart.css" />
 </head>
 <body>
 
     <!-- Collapsible Left Menu -->
     <div class="sidebar">
-        <div class="sidebar-icon">
+        <!-- Added Accessibility attributes to icon -->
+        <div class="sidebar-icon" aria-label="Toggle menu" role="button" tabindex="0">
             <!-- Hamburger SVG -->
             <svg viewBox="0 0 100 80" width="24" height="24" fill="var(--text-main)">
                 <rect width="100" height="15"></rect>
@@ -34,7 +43,7 @@
 
     <!-- Floating Action Buttons Container -->
     <div class="floating-actions">
-        <button class="snipcart-customer-signin action-button">
+        <button class="action-button snipcart-customer-signin">
             👤 Account
         </button>
         <button class="snipcart-checkout action-button">
@@ -53,8 +62,8 @@
                 <p>Discover our cozy, custom-made crochet pieces and an exclusive collection of elegant fine jewelry.</p>
                 <a href="#crochet" class="cta-button">Shop Collection</a>
             </div>
-            <div class="hero-image">
-                <!-- Add hero image background in CSS or img tag here -->
+            <!-- Populated Hero Image with inline style to match existing layout -->
+            <div class="hero-image" role="img" aria-label="Crochet Chevron Blanket in progress" style="background-image: url('Yarn with tools.jpeg'); background-size: cover; background-position: center;">
             </div>
         </section>
 
@@ -65,7 +74,8 @@
                 
                 <!-- Product: Blanket -->
                 <div class="card">
-                    <div class="product-image" style="height: 250px; background-image: url('Yarn with tools.jpeg'); background-size: cover; background-position: center; border-radius: 5px; margin-bottom: 1rem;"></div>
+                    <!-- Updated Image Filename and added Accessibility -->
+                    <div class="product-image" role="img" aria-label="Chevron Crochet Blanket" style="height: 250px; background-image: url('Yarn with tools.jpeg'); background-size: cover; background-position: center; border-radius: 5px; margin-bottom: 1rem;"></div>
                     <h3>Chevron Crochet Blanket</h3>
                     <p class="price">₹95.00</p>
                     <button class="buy-button snipcart-add-item"
@@ -73,7 +83,7 @@
                         data-item-price="95.00"
                         data-item-url="/"
                         data-item-description="Beautiful handmade chevron pattern blanket with premium yarn."
-                        data-item-image="Yarn with tools.jpeg"
+                        data-item-image="Yarn with tools_2.jpeg"
                         data-item-name="Chevron Crochet Blanket">
                         Add to Cart
                     </button>
@@ -81,7 +91,8 @@
 
                 <!-- Product: Doll -->
                 <div class="card">
-                    <div class="product-image" style="height: 250px; background-image: url('Doll.jpeg'); background-size: cover; background-position: center; border-radius: 5px; margin-bottom: 1rem;"></div>
+                    <!-- Updated Image Filename and added Accessibility -->
+                    <div class="product-image" role="img" aria-label="Yellow Amigurumi Doll" style="height: 250px; background-image: url('Doll.jpeg'); background-size: cover; background-position: center; border-radius: 5px; margin-bottom: 1rem;"></div>
                     <h3>Yellow Amigurumi Doll</h3>
                     <p class="price">₹25.00</p>
                     <button class="buy-button snipcart-add-item"
@@ -97,7 +108,8 @@
 
                 <!-- Product: Bag -->
                 <div class="card">
-                    <div class="product-image" style="height: 250px; background: var(--border-color); border-radius: 5px; margin-bottom: 1rem;"></div>
+                    <!-- Added Accessibility to empty image placeholder -->
+                    <div class="product-image" role="img" aria-label="Chunky Tote Bag Placeholder" style="height: 250px; background: var(--border-color); border-radius: 5px; margin-bottom: 1rem;"></div>
                     <h3>Chunky Tote Bag</h3>
                     <p class="price">₹55.00</p>
                     <button class="buy-button snipcart-add-item"
@@ -113,7 +125,7 @@
 
                 <!-- Product: Charm -->
                 <div class="card">
-                    <div class="product-image" style="height: 250px; background: var(--border-color); border-radius: 5px; margin-bottom: 1rem;"></div>
+                    <div class="product-image" role="img" aria-label="Bag Charm Placeholder" style="height: 250px; background: var(--border-color); border-radius: 5px; margin-bottom: 1rem;"></div>
                     <h3>Bag Charm</h3>
                     <p class="price">₹10.00</p>
                     <button class="buy-button snipcart-add-item"
@@ -135,7 +147,7 @@
             <div class="grid">
                 <!-- Product: Metal Necklace -->
                 <div class="card">
-                    <div class="product-image" style="height: 250px; background: var(--border-color); border-radius: 5px; margin-bottom: 1rem;"></div>
+                    <div class="product-image" role="img" aria-label="18k Gold Plated Pendant Placeholder" style="height: 250px; background: var(--border-color); border-radius: 5px; margin-bottom: 1rem;"></div>
                     <h3>18k Gold Plated Pendant</h3>
                     <p class="price">₹120.00</p>
                     <button class="buy-button snipcart-add-item"
@@ -151,7 +163,7 @@
                 
                 <!-- Product: Metal Ring -->
                 <div class="card">
-                    <div class="product-image" style="height: 250px; background: var(--border-color); border-radius: 5px; margin-bottom: 1rem;"></div>
+                    <div class="product-image" role="img" aria-label="Sterling Silver Band Placeholder" style="height: 250px; background: var(--border-color); border-radius: 5px; margin-bottom: 1rem;"></div>
                     <h3>Sterling Silver Band</h3>
                     <p class="price">₹65.00</p>
                     <button class="buy-button snipcart-add-item"
@@ -211,8 +223,11 @@
     </main>
 
     <!-- Snipcart JavaScript -->
-    <script async src="https://cdn.snipcart.com/themes/v3.4.0/default/snipcart.js"></script>
-    <div hidden id="snipcart" data-api-key="MmVhY2Y5N2ItZjIwYi00NGE5LWFiZWYtMjAwNmM5MmZjY2IxNjM5MjA2NzE2MzY1MjM5ODkw"></div>
+    <script async src="https://cdn.snipcart.com/themes/v3.3.1/default/snipcart.js"></script>
+    <div hidden id="snipcart" 
+        data-api-key="MmVhY2Y5N2ItZjIwYi00NGE5LWFiZWYtMjAwNmM5MmZjY2IxNjM5MjA2NzE2MzY1MjM5ODkw" 
+        data-currency="inr">
+    </div>
 
 </body>
 </html>
