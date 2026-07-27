@@ -1,17 +1,119 @@
 ---
+import Layout from '../layouts/Layout.astro';
 
+// Grabs all markdown files using the modern Vite method
+const products = Object.values(import.meta.glob('../products/*.md', { eager: true }));
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="logo">
+                <img src="/logo.png" alt="sutracrochet logo"> 
+            </div>
+            <h1>Handcrafted & <span class="highlight">Curated For You</span></h1>
+            <p>Discover our cozy, custom-made crochet pieces and an exclusive collection of elegant fine jewelry.</p>
+            <a href="#crochet" class="cta-button">Shop Collection</a>
+        </div>
+        <div class="hero-image" role="img" aria-label="Crochet Chevron Blanket in progress" style="background-image: url('/Yarn with tools.jpeg'); background-size: cover; background-position: center;">
+        </div>
+    </section>
+
+    <!-- Product Grid Placeholder -->
+    <section id="crochet" class="gallery">
+        <h2>Crochet Creations</h2>
+        <div class="grid">
+        {products.map((product) => (
+          <div class="product-card">
+            <img src={product.frontmatter.image} alt={product.frontmatter.title} />
+            <h3>{product.frontmatter.title}</h3>
+            <p>${product.frontmatter.price}</p>
+            
+            <button class="snipcart-add-item"
+              data-item-id={product.frontmatter.id}
+              data-item-price={product.frontmatter.price}
+              data-item-description={product.frontmatter.description}
+              data-item-image={product.frontmatter.image}
+              data-item-name={product.frontmatter.title}>
+              Add to cart
+            </button>
+          </div>
+        ))}
+        </div>
+    </section>
+    <!-- Fine Jewelry Section -->
+        <section id="jewelry" class="gallery">
+            <h2>Fine Jewelry</h2>
+            <div class="grid">
+                <!-- Product: Metal Necklace -->
+                <div class="product-card">
+                    <div class="product-image" role="img" aria-label="18k Gold Plated Pendant Placeholder" style="height: 250px; background: var(--border-color); border-radius: 5px; margin-bottom: 1rem;"></div>
+                    <h3>18k Gold Plated Pendant</h3>
+                    <p class="price">₹120.00</p>
+                    <button class="buy-button snipcart-add-item"
+                        data-item-id="fine-jewelry-01"
+                        data-item-price="120.00"
+                        data-item-url="/"
+                        data-item-description="Minimalist 18k gold plated chain and pendant."
+                        data-item-image="logo.png"
+                        data-item-name="18k Gold Plated Pendant">
+                        Add to Cart
+                    </button>
+                </div>
+                
+                <!-- Product: Metal Ring -->
+                <div class="card">
+                    <div class="product-image" role="img" aria-label="Sterling Silver Band Placeholder" style="height: 250px; background: var(--border-color); border-radius: 5px; margin-bottom: 1rem;"></div>
+                    <h3>Sterling Silver Band</h3>
+                    <p class="price">₹65.00</p>
+                    <button class="buy-button snipcart-add-item"
+                        data-item-id="fine-jewelry-02"
+                        data-item-price="65.00"
+                        data-item-url="/"
+                        data-item-description="Classic 925 sterling silver band."
+                        data-item-image="logo.png"
+                        data-item-name="Sterling Silver Band">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tutorials Section -->
+        <section id="tutorials" class="tutorials">
+            <h2>Learn to Crochet</h2>
+            <div class="grid">
+                <div class="card video-card">
+                    <div class="video-placeholder">Free Trial Video</div>
+                    <h3>Basic Stitch Guide</h3>
+                    <p>Start your crochet journey with our beginner-friendly basics.</p>
+                </div>
+                <div class="card video-card premium">
+                    <div class="video-placeholder">Premium Video</div>
+                    <h3>Advanced Blanket Pattern</h3>
+                    <p class="price">₹15.00</p>
+                    <button class="buy-button snipcart-add-item"
+                        data-item-id="tutorial-01"
+                        data-item-price="15.00"
+                        data-item-url="/"
+                        data-item-description="Learn advanced blanket patterns."
+                        data-item-image="logo.png"
+                        data-item-name="Advanced Blanket Pattern">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <p class="contact-sub">Have a question or want to request a custom piece? Drop a message below!</p>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Tell me about your custom request or question..." rows="5" required></textarea>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </section>
+</Layout>
