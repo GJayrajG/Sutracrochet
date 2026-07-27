@@ -1,0 +1,66 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sutracrochet | Handcrafted For You</title>
+    <!-- The leading slash is important for Astro public folder paths -->
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://app.snipcart.com">
+    <link rel="preconnect" href="https://cdn.snipcart.com">
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.1/default/snipcart.css" />
+    <!-- Required for CMS Login -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-icon" aria-label="Toggle menu" role="button" tabindex="0">
+            <svg viewBox="0 0 100 80" width="24" height="24" fill="var(--text-main)">
+                <rect width="100" height="15"></rect>
+                <rect y="30" width="100" height="15"></rect>
+                <rect y="60" width="100" height="15"></rect>
+            </svg>
+        </div>
+        <nav class="side-nav">
+            <a href="#crochet">Crochet Creations</a>
+            <a href="#jewelry">Fine Jewelry</a>
+            <a href="#tutorials">Tutorials</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact Us</a>
+            <a href="#" class="snipcart-customer-signin" style="color: var(--accent-primary);">My Account</a>
+        </nav>
+    </div>
+
+    <div class="floating-actions">
+        <button class="action-button snipcart-customer-signin">👤 Account</button>
+        <button class="snipcart-checkout action-button">🛒 Cart (<span class="snipcart-items-count">0</span>)</button>
+    </div>
+
+    <main class="main-content">
+        <!-- Your page content will be automatically injected here -->
+        <slot /> 
+
+        <footer>
+            <p>&copy; 2026 sutracrochet. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <script async src="https://cdn.snipcart.com/themes/v3.3.1/default/snipcart.js"></script>
+    <div hidden id="snipcart" data-api-key="MmVhY2Y5N2ItZjIwYi00NGE5LWFiZWYtMjAwNmM5MmZjY2IxNjM5MjA2NzE2MzY1MjM5ODkw" data-currency="inr"></div>
+
+    <!-- CMS Login Redirect Script -->
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+</body>
+</html>
