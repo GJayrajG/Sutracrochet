@@ -1,96 +1,22 @@
-# \# Sutra Crochet \& Fine Jewelry Store
+# SutraCrochet E-Commerce Platform
 
-# 
+A bespoke, headless e-commerce website for handcrafted crochet items and fine jewelry.
 
-# A fast, modern e-commerce and showcase website for \*\*Sutra\*\*, built using \[Astro](https://astro.build/), integrated with \[Decap CMS](https://decapcms.org/) for content management, and powered by \[Snipcart](https://snipcart.com/) for online shopping.
+## Project Overview
 
-# 
+This project serves as the digital storefront for SutraCrochet. It has been recently migrated to the **Astro** framework for enhanced performance and a component-based architecture. It maintains a focus on a clean, dark-themed UI, responsive design, and seamless cart functionality, now powered by dynamic content management.
 
-# \---
+## Tech Stack
 
-# 
+*   **Frontend:** Astro, HTML5, CSS3
+*   **Content Management (CMS):** Decap CMS (Markdown-based)
+*   **E-Commerce:** Snipcart (Headless Cart API)
+*   **Deployment:** Netlify
 
-# \## 🚀 Features
+## Key Features
 
-# 
-
-# \- \*\*Astro Architecture:\*\* Built for lightning-fast site performance and low JavaScript overhead.
-
-# \- \*\*Dynamic Content:\*\* Automatically loads product cards and patterns from local Markdown files (`/products/\*.md`) using Astro’s eager file globbing.
-
-# \- \*\*Headless CMS Integration:\*\* Integrated with Decap CMS at `/admin` for editing products, descriptions, prices, and media.
-
-# \- \*\*Seamless E-commerce:\*\* Shopping cart, checkout, and item management handled securely via Snipcart.
-
-# \- \*\*Custom UI Design:\*\*
-
-# &#x20; - Dark-mode visual theme with gold accent palette (`#CDA047`).
-
-# &#x20; - Hover-expandable collapsible sidebar navigation.
-
-# &#x20; - Custom responsive product card grid layouts.
-
-# &#x20; - Custom contact form and floating interactive action buttons.
-
-# 
-
-# \---
-
-# 
-
-# \## 🛠️ Tech Stack
-
-# 
-
-# \- \*\*Framework:\*\* Astro (vlatest)
-
-# \- \*\*CMS:\*\* Decap CMS
-
-# \- \*\*Payments / E-Commerce:\*\* Snipcart
-
-# \- \*\*Styling:\*\* Custom CSS with CSS Variables
-
-# \- \*\*Language:\*\* HTML / CSS / JavaScript / Markdown
-
-# 
-
-# \---
-
-# 
-
-# \## 📁 Project Structure
-
-# 
-
-# ```text
-
-# sutracrochet-store/
-
-# ├── public/
-
-# │   ├── admin/
-
-# │   │   ├── index.html       # Decap CMS entry point
-
-# │   │   └── config.yml       # Decap CMS configuration
-
-# │   └── images/              # Static assets and product images
-
-# ├── src/
-
-# │   ├── layouts/
-
-# │   │   └── Layout.astro     # Base HTML layout (Sidebar, Snipcart scripts)
-
-# │   ├── pages/
-
-# │   │   └── index.astro      # Main storefront landing page
-
-# │   └── products/            # Product catalog Markdown files
-
-# ├── styles.css               # Global project styles \& variable definitions
-
-# ├── astro.config.mjs
-
-# └── package.json
-
+*   **Server-Side Generation:** Lightning-fast page loads powered by Astro.
+*   **Dynamic Product Grid:** Products are rendered dynamically from Markdown files via Decap CMS.
+*   **Responsive Side Navigation:** Collapsible sidebar for seamless browsing.
+*   **Secure Checkout:** Integrated with Snipcart to handle transactions in Indian Rupees (INR).
+*   **Custom Animations:** Pure CSS hover states and constrained, responsive product cards.
