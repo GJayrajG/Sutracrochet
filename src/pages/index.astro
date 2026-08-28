@@ -1,8 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { MongoClient } from 'mongodb';
 
-// Grabs all markdown files using the modern Vite method
-const products = Object.values(import.meta.glob('../products/*.md', { eager: true }));
+const uri = import.meta.env.MONGODB_URI;
+let products = [];
+
+try {
+    const client = new MongoClient(uri);
+    await client.connect();
+    const db = client.db('sutracrochet');
+    products = await db.collection('products').find({}).toArray();
+    await client.close();
+} catch (e) {
+    console.error("Failed to fetch products from MongoDB:", e);
+}
 ---
 
 <Layout>
@@ -25,16 +36,16 @@ const products = Object.values(import.meta.glob('../products/*.md', { eager: tru
         <div class="grid">
         {products.map((product) => (
           <div class="product-card">
-            <img src={product.frontmatter.image} alt={product.frontmatter.title} />
-            <h3>{product.frontmatter.title}</h3>
-            <p>${product.frontmatter.price}</p>
+            <img src={product.image} alt={product.title} />
+            <h3>{product.title}</h3>
+            <p>${product.price}</p>
             
             <button class="snipcart-add-item"
-              data-item-id={product.frontmatter.id}
-              data-item-price={product.frontmatter.price}
-              data-item-description={product.frontmatter.description}
-              data-item-image={product.frontmatter.image}
-              data-item-name={product.frontmatter.title}>
+              data-item-id={product.id}
+              data-item-price={product.price}
+              data-item-description={product.description}
+              data-item-image={product.image}
+              data-item-name={product.title}>
               Add to cart
             </button>
           </div>
